@@ -47,7 +47,7 @@ jobs:
         with:
           name: cgu-piloto-${{ github.run_id }}
           path: |
-            work/pilot/snapshot.json
+            work/pilot/municipal-aggregate.json
             work/pilot/provenance/totals-*.json
             work/pilot/verification.json
           if-no-files-found: error

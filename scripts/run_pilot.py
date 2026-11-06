@@ -31,8 +31,9 @@ def main():
     evidence = {'collectedAt': now, 'kind': 'municipal-aggregate-pilot', 'city': city,
                 'month': period, 'responses': client.evidence}
     digest = hashlib.sha256(json.dumps(evidence, sort_keys=True).encode()).hexdigest()[:16]
-    save(output / 'municipal-aggregate.json', {'scope': 'municipal-pilot', 'release': digest,
-        'updatedAt': now, 'municipality': rows[0]['municipio'], 'record': row})
+    aggregate = {'scope': 'municipal-pilot', 'release': digest,
+        'updatedAt': now, 'municipality': rows[0]['municipio'], 'record': row}
+    save(output / 'municipal-aggregate.json', aggregate)
     save(output / 'provenance' / f'totals-{digest}.json', evidence)
     files = []
     for path in sorted(output.rglob('*.json')):
@@ -40,9 +41,10 @@ def main():
             continue
         files.append({'path': path.relative_to(output).as_posix(), 'bytes': path.stat().st_size,
                       'sha256': hashlib.sha256(path.read_bytes()).hexdigest()})
-    save(output / 'verification.json', {'release': digest, 'city': city, 'month': period,
+    verification = {'release': digest, 'city': city, 'month': period,
         'aggregateRows': 1, 'scopeValidated': True, 'nationalCoverageAssessed': False,
-        'files': files, 'note': 'CGU authenticated pilot. The national IBGE catalog is not required or certified by this pilot.'})
+        'files': files, 'note': 'CGU authenticated pilot. The national IBGE catalog is not required or certified by this pilot.'}
+    save(output / 'verification.json', verification)
     summary = (f'## Coleta piloto CGU\n\n'
                f'- Município IBGE: {city}\n- Mês: {period}\n'
                f'- Registros agregados: 1\n- Valor em centavos: {row["valueCents"]}\n'
@@ -54,6 +56,8 @@ def main():
     if os.environ.get('GITHUB_STEP_SUMMARY'):
         Path(os.environ['GITHUB_STEP_SUMMARY']).write_text(summary, encoding='utf-8')
     print('CGU authenticated pilot completed; one aggregate verified, original-byte hashes recorded.', flush=True)
+    # Deliberately aggregate-only: enables durable public evidence without raw records or secrets.
+    print('PILOT_EVIDENCE ' + json.dumps({'aggregate': aggregate, 'provenance': evidence, 'verification': verification}, ensure_ascii=False, separators=(',', ':')), flush=True)
 
 
 if __name__ == '__main__':

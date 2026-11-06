@@ -1,0 +1,2 @@
+# Vectorized processing of the official bulk monthly CSVs.
+duckdb==1.4.3

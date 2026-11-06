@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Publishable name/amount-only assets, sorted chunks and auditable bounds; no identifiers."""
-import argparse,gzip,json,hashlib
+import argparse,gzip,json,hashlib,shutil
 from pathlib import Path
 import duckdb
 from bulk import sql,canonical,sha
@@ -21,7 +21,11 @@ def generate(parquet,output,period,months,monthly=False,chunk_size=10000):
     spill=out.parent/'pages-spill';spill.mkdir(exist_ok=True);con.execute('SET temp_directory='+sql(spill))
     con.read_parquet(str(parquet)).create_view('p')
     if monthly:
-        people=f"SELECT siafi,coalesce(nis,'anonymous:'||source_row) person_key,arg_max(coalesce(name,'Não informado na fonte'),reference) AS name,sum(value_cents)::BIGINT value_cents FROM p GROUP BY siafi,person_key"
+        parts=out.parent/'monthly-people';parts.mkdir(exist_ok=True)
+        for uf, in con.execute('SELECT DISTINCT uf FROM p ORDER BY uf').fetchall():
+            query=f"SELECT siafi,coalesce(nis,'anonymous:'||source_row) person_key,arg_max(coalesce(name,'Não informado na fonte'),reference) AS name,sum(value_cents)::BIGINT value_cents FROM p WHERE uf={sql(uf)} GROUP BY siafi,person_key"
+            con.execute(f"COPY ({query}) TO {sql(parts/(uf+'.parquet'))} (FORMAT PARQUET,COMPRESSION ZSTD)")
+        people=f'SELECT * FROM read_parquet({sql(parts/"*.parquet")})'
     else:people='SELECT siafi,person_key,name,value_cents FROM p'
     con.sql(people).create_view('people')
     # DuckDB strips Latin accents consistently with the API's search normalization.
@@ -46,6 +50,7 @@ def generate(parquet,output,period,months,monthly=False,chunk_size=10000):
             amount=int(amount);buffer.append([name,amount,normalized]);city_sum+=amount;city_total+=1;all_sum+=amount;all_count+=1
             if len(buffer)==chunk_size:flush()
     finish();con.close()
+    if monthly:shutil.rmtree(parts)
     files=list(out.rglob('*'));files=[p for p in files if p.is_file()]
     if len(files)>19500:raise ValueError('Pages Free file bound exceeded; do not deploy or upgrade automatically')
     if any(p.stat().st_size>25*1024*1024 for p in files):raise ValueError('Pages individual asset bound exceeded')

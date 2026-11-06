@@ -1,0 +1,746 @@
+{
+  "release": "a36948370114f70a",
+  "monthlyFiles": [
+    {
+      "month": "202303",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202303",
+      "zipSha256": "93d828d72bc195e876aa6ea6d1c979baf9ff05dc5ed2280562cb2179cc6ade50",
+      "zipBytes": 353465156,
+      "csvMember": "202303_NovoBolsaFamilia.csv",
+      "csvCRC32": "0145c753",
+      "sourceRows": 20419605,
+      "valueCents": 1315927978700,
+      "missingNisRows": 415,
+      "referenceRange": [
+        "202303",
+        "202303"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202304",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202304",
+      "zipSha256": "1005d200265df260973442908e604f13bbb5ea03b8f4573bb958fb5f92ad7f05",
+      "zipBytes": 348608516,
+      "csvMember": "202304_NovoBolsaFamilia.csv",
+      "csvCRC32": "80ec1c0e",
+      "sourceRows": 20092338,
+      "valueCents": 1293849106800,
+      "missingNisRows": 413,
+      "referenceRange": [
+        "202304",
+        "202304"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202305",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202305",
+      "zipSha256": "bbf1319bab4f66666f55f6c2d1d062e731e73e96c0b226e6fa9da31d8e2cc6dd",
+      "zipBytes": 353342808,
+      "csvMember": "202305_NovoBolsaFamilia.csv",
+      "csvCRC32": "eb42b89e",
+      "sourceRows": 20356776,
+      "valueCents": 1309836045600,
+      "missingNisRows": 417,
+      "referenceRange": [
+        "202303",
+        "202305"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202306",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202306",
+      "zipSha256": "6882ccd4fc1213903b351d177ad5be0c83fa51c4d61f564710e7a006b533264b",
+      "zipBytes": 366413155,
+      "csvMember": "202306_NovoBolsaFamilia.csv",
+      "csvCRC32": "0f85bb02",
+      "sourceRows": 20699443,
+      "valueCents": 1411573812700,
+      "missingNisRows": 418,
+      "referenceRange": [
+        "202306",
+        "202306"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202307",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202307",
+      "zipSha256": "c2c933a7c7fb9d5e65170c6697ba8c8e25a16b63020ac22cbea324e6186d969e",
+      "zipBytes": 360378485,
+      "csvMember": "202307_NovoBolsaFamilia.csv",
+      "csvCRC32": "a297afc7",
+      "sourceRows": 20223944,
+      "valueCents": 1327727812700,
+      "missingNisRows": 413,
+      "referenceRange": [
+        "202303",
+        "202307"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202308",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202308",
+      "zipSha256": "682d30b23731b4dbd451951065514a876665ea15e4da4bf8659035ddc8d299dd",
+      "zipBytes": 360266201,
+      "csvMember": "202308_NovoBolsaFamilia.csv",
+      "csvCRC32": "590126a1",
+      "sourceRows": 20224451,
+      "valueCents": 1334872471000,
+      "missingNisRows": 401,
+      "referenceRange": [
+        "202303",
+        "202308"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202309",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202309",
+      "zipSha256": "4fdb6884b320b1c3328ddea5d51bb8dfa38e8614978b8e37354404d4d6f3b96b",
+      "zipBytes": 367351212,
+      "csvMember": "202309_NovoBolsaFamilia.csv",
+      "csvCRC32": "9c89d04a",
+      "sourceRows": 20693202,
+      "valueCents": 1370785410700,
+      "missingNisRows": 410,
+      "referenceRange": [
+        "202303",
+        "202309"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202310",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202310",
+      "zipSha256": "94a80e3e061723d91a0e45dac0b1818852259a15478cfc1d9f4e2e12a7a78958",
+      "zipBytes": 367176543,
+      "csvMember": "202310_NovoBolsaFamilia.csv",
+      "csvCRC32": "0d061a74",
+      "sourceRows": 20667150,
+      "valueCents": 1376322173200,
+      "missingNisRows": 410,
+      "referenceRange": [
+        "202303",
+        "202310"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202311",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202311",
+      "zipSha256": "8c73cb08b20c7d7c7aa926518aec325a066f41ff40775ed8f2754b4a653dcee6",
+      "zipBytes": 368570790,
+      "csvMember": "202311_NovoBolsaFamilia.csv",
+      "csvCRC32": "08c23534",
+      "sourceRows": 20722815,
+      "valueCents": 1351101535100,
+      "missingNisRows": 403,
+      "referenceRange": [
+        "202303",
+        "202311"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202312",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202312",
+      "zipSha256": "53e3a0355e20fc6d23fd67c9a3652f25c6a772191eca4eb5b695a2f8ae9c1b5b",
+      "zipBytes": 372748502,
+      "csvMember": "202312_NovoBolsaFamilia.csv",
+      "csvCRC32": "e81a2cb7",
+      "sourceRows": 20970778,
+      "valueCents": 1367143546000,
+      "missingNisRows": 406,
+      "referenceRange": [
+        "202303",
+        "202312"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202401",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202401",
+      "zipSha256": "bb9d7b258400197fe5d67886ddda6ebfcd1046f978c207fc7e76f376c385370b",
+      "zipBytes": 369677459,
+      "csvMember": "202401_NovoBolsaFamilia.csv",
+      "csvCRC32": "ec2026fb",
+      "sourceRows": 20833379,
+      "valueCents": 1368846002900,
+      "missingNisRows": 393,
+      "referenceRange": [
+        "202303",
+        "202401"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202402",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202402",
+      "zipSha256": "098cbf1b4cb6325d9ae8af5b8b79715311a22f58f5e01157f2d6eb815f2e00c2",
+      "zipBytes": 372190412,
+      "csvMember": "202402_NovoBolsaFamilia.csv",
+      "csvCRC32": "f0acbe68",
+      "sourceRows": 20961127,
+      "valueCents": 1381902408000,
+      "missingNisRows": 402,
+      "referenceRange": [
+        "202303",
+        "202402"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202403",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202403",
+      "zipSha256": "cae146d74da8cfd30bccc5279e78f6a7fc53323f406e0d61edda51c56df80608",
+      "zipBytes": 365124681,
+      "csvMember": "202403_NovoBolsaFamilia.csv",
+      "csvCRC32": "b0ab663a",
+      "sourceRows": 20534090,
+      "valueCents": 1339900424400,
+      "missingNisRows": 379,
+      "referenceRange": [
+        "202303",
+        "202403"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202404",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202404",
+      "zipSha256": "2bbf8ea6f461abbb56bcae012c79072af43fe7d7df4f68e1fa1551d1098e346f",
+      "zipBytes": 364754461,
+      "csvMember": "202404_NovoBolsaFamilia.csv",
+      "csvCRC32": "eb4e81c5",
+      "sourceRows": 20490064,
+      "valueCents": 1341856491400,
+      "missingNisRows": 371,
+      "referenceRange": [
+        "202304",
+        "202404"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202405",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202405",
+      "zipSha256": "44505fb7aa5059e123e799d299264fcf7d02a794907cdba54a3226c11c501aef",
+      "zipBytes": 364596986,
+      "csvMember": "202405_NovoBolsaFamilia.csv",
+      "csvCRC32": "50b89474",
+      "sourceRows": 20504522,
+      "valueCents": 1346399173900,
+      "missingNisRows": 374,
+      "referenceRange": [
+        "202303",
+        "202405"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202406",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202406",
+      "zipSha256": "7755c1984fa15a97c87c352dfd4d1536389505b307fbccc94392f3b66c704b57",
+      "zipBytes": 365414620,
+      "csvMember": "202406_NovoBolsaFamilia.csv",
+      "csvCRC32": "0b6257fd",
+      "sourceRows": 20554030,
+      "valueCents": 1354473098700,
+      "missingNisRows": 377,
+      "referenceRange": [
+        "202306",
+        "202406"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202407",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202407",
+      "zipSha256": "6d41f7abc7cc4018a90e9dd5882a7dda15f929bae075588e01992100459006b8",
+      "zipBytes": 370409458,
+      "csvMember": "202407_NovoBolsaFamilia.csv",
+      "csvCRC32": "192ba9f4",
+      "sourceRows": 20838554,
+      "valueCents": 1359887560900,
+      "missingNisRows": 380,
+      "referenceRange": [
+        "202305",
+        "202407"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202408",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202408",
+      "zipSha256": "e38309749d83913cac5813d85d97682121975dd1d91757ec722b04d4503e406f",
+      "zipBytes": 367659993,
+      "csvMember": "202408_NovoBolsaFamilia.csv",
+      "csvCRC32": "94be41b6",
+      "sourceRows": 20683526,
+      "valueCents": 1353923837300,
+      "missingNisRows": 375,
+      "referenceRange": [
+        "202307",
+        "202408"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202409",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202409",
+      "zipSha256": "1dd9fc4552a780387dd2eb555f048ad08f17967bceabd9e13116a6dbba7ea167",
+      "zipBytes": 368763505,
+      "csvMember": "202409_NovoBolsaFamilia.csv",
+      "csvCRC32": "18a35363",
+      "sourceRows": 20768173,
+      "valueCents": 1359602893000,
+      "missingNisRows": 374,
+      "referenceRange": [
+        "202307",
+        "202409"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202410",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202410",
+      "zipSha256": "2a5271755c3beb9f8ff6a856c17e79ecda9034222186314f7ba46178982a9cc8",
+      "zipBytes": 367172266,
+      "csvMember": "202410_NovoBolsaFamilia.csv",
+      "csvCRC32": "fb596652",
+      "sourceRows": 20658029,
+      "valueCents": 1347383707500,
+      "missingNisRows": 378,
+      "referenceRange": [
+        "202310",
+        "202410"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202411",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202411",
+      "zipSha256": "820593a2095eb25e8cca5a1fb6b6b7f0d0c3e35b351c6dbf8755c5773cf1f2dd",
+      "zipBytes": 365056808,
+      "csvMember": "202411_NovoBolsaFamilia.csv",
+      "csvCRC32": "7ac10391",
+      "sourceRows": 20707018,
+      "valueCents": 1394017150600,
+      "missingNisRows": 375,
+      "referenceRange": [
+        "202307",
+        "202411"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202412",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202412",
+      "zipSha256": "bf1732da86c0e45913e4958b27299ab2f6f5113a907a7828ed4090635d49e99c",
+      "zipBytes": 364101362,
+      "csvMember": "202412_NovoBolsaFamilia.csv",
+      "csvCRC32": "92825492",
+      "sourceRows": 20669798,
+      "valueCents": 1397012550300,
+      "missingNisRows": 361,
+      "referenceRange": [
+        "202312",
+        "202412"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202501",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202501",
+      "zipSha256": "e4fa571d52a60e5dc8a7e961d96f7e7aef49fb1703c9350824860482384e8762",
+      "zipBytes": 361299248,
+      "csvMember": "202501_NovoBolsaFamilia.csv",
+      "csvCRC32": "1b9d2476",
+      "sourceRows": 20500422,
+      "valueCents": 1373577033000,
+      "missingNisRows": 371,
+      "referenceRange": [
+        "202308",
+        "202501"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202502",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202502",
+      "zipSha256": "820947cf3aae3a810fbac6d929cc6417079acddbfa1e1bd4521fcadd79ab3dbd",
+      "zipBytes": 360552678,
+      "csvMember": "202502_NovoBolsaFamilia.csv",
+      "csvCRC32": "aad24254",
+      "sourceRows": 20473537,
+      "valueCents": 1371319758800,
+      "missingNisRows": 359,
+      "referenceRange": [
+        "202402",
+        "202502"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202503",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202503",
+      "zipSha256": "fca6f402d1b5333bd3d51d554c94729d34092b81949ea53c8f5dd0e2b0489d28",
+      "zipBytes": 359651252,
+      "csvMember": "202503_NovoBolsaFamilia.csv",
+      "csvCRC32": "6d64268e",
+      "sourceRows": 20431725,
+      "valueCents": 1358607974300,
+      "missingNisRows": 356,
+      "referenceRange": [
+        "202403",
+        "202503"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202504",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202504",
+      "zipSha256": "047904e34b0ee33f68a2e99a22874b46894ce7c1f8097568d7df238305c9ef29",
+      "zipBytes": 358578349,
+      "csvMember": "202504_NovoBolsaFamilia.csv",
+      "csvCRC32": "61efa2ad",
+      "sourceRows": 20363840,
+      "valueCents": 1357378173800,
+      "missingNisRows": 358,
+      "referenceRange": [
+        "202404",
+        "202504"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202505",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202505",
+      "zipSha256": "477b0a7bebe7fdd3aa734abc0a0099b68f249d8761bf24491880fe67c54b2585",
+      "zipBytes": 358122899,
+      "csvMember": "202505_NovoBolsaFamilia.csv",
+      "csvCRC32": "d20d9d96",
+      "sourceRows": 20357879,
+      "valueCents": 1355501974200,
+      "missingNisRows": 342,
+      "referenceRange": [
+        "202405",
+        "202505"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202506",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202506",
+      "zipSha256": "8a418fb59ce9da7ec84b5113faa60ab0b2492b2564f0925e6e85e9726231af1d",
+      "zipBytes": 349159419,
+      "csvMember": "202506_NovoBolsaFamilia.csv",
+      "csvCRC32": "60d29739",
+      "sourceRows": 19847421,
+      "valueCents": 1325510864600,
+      "missingNisRows": 326,
+      "referenceRange": [
+        "202409",
+        "202506"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202507",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202507",
+      "zipSha256": "9deceebe008978aabacbb4fb06c431c421bdcf66e901a25408573bbd5991655a",
+      "zipBytes": 333478282,
+      "csvMember": "202507_NovoBolsaFamilia.csv",
+      "csvCRC32": "b01f1508",
+      "sourceRows": 18986128,
+      "valueCents": 1274941143700,
+      "missingNisRows": 337,
+      "referenceRange": [
+        "202412",
+        "202507"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202508",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202508",
+      "zipSha256": "f968ba6401ff4fec760c366beb8fdbb3ee7b759841e49a265ac90a48e6f7a4ec",
+      "zipBytes": 330268989,
+      "csvMember": "202508_NovoBolsaFamilia.csv",
+      "csvCRC32": "ad838da9",
+      "sourceRows": 18777743,
+      "valueCents": 1261961282000,
+      "missingNisRows": 326,
+      "referenceRange": [
+        "202501",
+        "202508"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202509",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202509",
+      "zipSha256": "6bd82865e6fba00b70404ae2bb47dfe735f4938c358e39534d1578c1ded3a2b5",
+      "zipBytes": 336289417,
+      "csvMember": "202509_NovoBolsaFamilia.csv",
+      "csvCRC32": "98cb9deb",
+      "sourceRows": 19104530,
+      "valueCents": 1280365699700,
+      "missingNisRows": 328,
+      "referenceRange": [
+        "202411",
+        "202509"
+      ],
+      "municipalities": 5570,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202510",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202510",
+      "zipSha256": "9a07953812a702ab6ed4217804884764781df5ae3037e3cf479d6829aa53fb66",
+      "zipBytes": 328325296,
+      "csvMember": "202510_NovoBolsaFamilia.csv",
+      "csvCRC32": "89104367",
+      "sourceRows": 18599089,
+      "valueCents": 1252832708200,
+      "missingNisRows": 327,
+      "referenceRange": [
+        "202502",
+        "202510"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202511",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202511",
+      "zipSha256": "ad46d442b9c12696c1a60cbc46bb31cc088504bf798ad807902230c50202caa9",
+      "zipBytes": 323419904,
+      "csvMember": "202511_NovoBolsaFamilia.csv",
+      "csvCRC32": "c844d7a4",
+      "sourceRows": 18313365,
+      "valueCents": 1235335689700,
+      "missingNisRows": 305,
+      "referenceRange": [
+        "202504",
+        "202511"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202512",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202512",
+      "zipSha256": "47e19bdcde4afb8346e16d798ad7b8cd0255e11d6bf6c6b11c9a454d6e378e65",
+      "zipBytes": 330125227,
+      "csvMember": "202512_NovoBolsaFamilia.csv",
+      "csvCRC32": "36d636ba",
+      "sourceRows": 18670749,
+      "valueCents": 1264589580800,
+      "missingNisRows": 320,
+      "referenceRange": [
+        "202503",
+        "202512"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202601",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202601",
+      "zipSha256": "31ecf240eecaa11ab0a2d62c13664800ea1da7228b9e86bbbde95b93a81b0cd3",
+      "zipBytes": 346395830,
+      "csvMember": "202601_NovoBolsaFamilia.csv",
+      "csvCRC32": "19504634",
+      "sourceRows": 19480034,
+      "valueCents": 1297877364600,
+      "missingNisRows": 322,
+      "referenceRange": [
+        "202502",
+        "202601"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202602",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202602",
+      "zipSha256": "accf15c76b4a2d262d49b0df1e47735f9bb6f8add01ccea47d8918f96468f24c",
+      "zipBytes": 342135781,
+      "csvMember": "202602_NovoBolsaFamilia.csv",
+      "csvCRC32": "5e644915",
+      "sourceRows": 19307246,
+      "valueCents": 1293620469700,
+      "missingNisRows": 321,
+      "referenceRange": [
+        "202506",
+        "202602"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202603",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202603",
+      "zipSha256": "2bcbe98bd46992db0cbc5407f5ba8846c6994b4a7ca93e296665e5e1d07b912d",
+      "zipBytes": 333204237,
+      "csvMember": "202603_NovoBolsaFamilia.csv",
+      "csvCRC32": "67837c2c",
+      "sourceRows": 18866830,
+      "valueCents": 1269968194000,
+      "missingNisRows": 311,
+      "referenceRange": [
+        "202506",
+        "202603"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202604",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202604",
+      "zipSha256": "f9c2e5823015a7dbb8899490335b15d905bf9fc1840b1a10bc778a32e88b8af3",
+      "zipBytes": 332928006,
+      "csvMember": "202604_NovoBolsaFamilia.csv",
+      "csvCRC32": "9561c8f8",
+      "sourceRows": 18875691,
+      "valueCents": 1272374812600,
+      "missingNisRows": 317,
+      "referenceRange": [
+        "202506",
+        "202604"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202605",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202605",
+      "zipSha256": "20187be6c19383ada2504f14c943129366dd4bb989de2b9dac0242ec80bdcd21",
+      "zipBytes": 334353873,
+      "csvMember": "202605_NovoBolsaFamilia.csv",
+      "csvCRC32": "19a0df61",
+      "sourceRows": 18997437,
+      "valueCents": 1283174333700,
+      "missingNisRows": 324,
+      "referenceRange": [
+        "202508",
+        "202605"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202606",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202606",
+      "zipSha256": "f7e7560c06113687276f936294894d78e406db94cd6a88ea82098a4b6a5951ab",
+      "zipBytes": 338176391,
+      "csvMember": "202606_NovoBolsaFamilia.csv",
+      "csvCRC32": "118566aa",
+      "sourceRows": 19224784,
+      "valueCents": 1299724940000,
+      "missingNisRows": 326,
+      "referenceRange": [
+        "202508",
+        "202606"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202607",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202607",
+      "zipSha256": "10a713d69ac156c52e84dc8b21394b3cdd1b674816f359dac255335e419f5d4f",
+      "zipBytes": 336364160,
+      "csvMember": "202607_NovoBolsaFamilia.csv",
+      "csvCRC32": "6f931941",
+      "sourceRows": 19162444,
+      "valueCents": 1297596490200,
+      "missingNisRows": 334,
+      "referenceRange": [
+        "202507",
+        "202607"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202608",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202608",
+      "zipSha256": "54b7b62116f1404bc308e0c649a496676a536e9bd6d9f6edc75f292579a2a926",
+      "zipBytes": 331990439,
+      "csvMember": "202608_NovoBolsaFamilia.csv",
+      "csvCRC32": "80d4986b",
+      "sourceRows": 18884737,
+      "valueCents": 1281043774600,
+      "missingNisRows": 325,
+      "referenceRange": [
+        "202601",
+        "202608"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    },
+    {
+      "month": "202609",
+      "source": "https://portaldatransparencia.gov.br/download-de-dados/novo-bolsa-familia/202609",
+      "zipSha256": "e46d134a13afc15dadec6a3915175001bad72f6b7ca8b44044ff0a4b714e12ae",
+      "zipBytes": 328626917,
+      "csvMember": "202609_NovoBolsaFamilia.csv",
+      "csvCRC32": "e52c3006",
+      "sourceRows": 18695578,
+      "valueCents": 1265979751100,
+      "missingNisRows": 315,
+      "referenceRange": [
+        "202601",
+        "202609"
+      ],
+      "municipalities": 5571,
+      "beneficiaryMethod": "distinct non-null NIS per municipality plus each row without NIS; API reconciliation required"
+    }
+  ],
+  "sourceRows": 859194021,
+  "valueCents": 57077627204700,
+  "snapshotSha256": "2333e64f9e55a7e57d479f4171e67b7aafffd1e8b2549f0f9f46a91891cadff8",
+  "sourceRelease": "eaddccf2ed8a8267",
+  "inflation": {
+    "baseMonth": "202609",
+    "source": "https://api.bcb.gov.br/dados/serie/bcdata.sgs.433/dados?formato=json&dataInicial=01/03/2023&dataFinal=06/11/2026",
+    "sourceSha256": "6373e6c79f2e3403955e6894919305247bdc2d0b148d4a57434663280c36ae43",
+    "method": "For payment month m, multiply by the product of 1+monthly IPCA from m+1 through the base month; round each monthly municipal amount to cents before annual sums."
+  }
+}

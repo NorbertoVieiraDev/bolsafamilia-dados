@@ -1,0 +1,76 @@
+{
+  "aggregate": {
+    "scope": "municipal-pilot",
+    "release": "9aa10dc82482b817",
+    "updatedAt": "2026-11-06T13:09:17.949470+00:00",
+    "municipality": {
+      "codigoIBGE": "3304557",
+      "nomeIBGE": "RIO DE JANEIRO",
+      "codigoRegiao": "3",
+      "nomeRegiao": "SUDESTE",
+      "pais": "BRASIL",
+      "uf": {
+        "sigla": "RJ",
+        "nome": "RIO DE JANEIRO"
+      }
+    },
+    "record": {
+      "city": "3304557",
+      "month": "202406",
+      "valueCents": 34859043200,
+      "beneficiaries": 544461
+    }
+  },
+  "provenance": {
+    "collectedAt": "2026-11-06T13:09:17.949470+00:00",
+    "kind": "municipal-aggregate-pilot",
+    "city": "3304557",
+    "month": "202406",
+    "responses": [
+      {
+        "url": "https://api.portaldatransparencia.gov.br/api-de-dados/novo-bolsa-familia-por-municipio?mesAno=202406&codigoIbge=3304557&pagina=1",
+        "sha256": "d417dfb75c9218b5a0574535b863ef7aafd0bb33c6a1dfd6c8bc1368a529dd6a",
+        "rows": 1,
+        "cached": false
+      },
+      {
+        "url": "https://api.portaldatransparencia.gov.br/api-de-dados/novo-bolsa-familia-por-municipio?mesAno=202406&codigoIbge=3304557&pagina=2",
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "rows": 0,
+        "cached": false
+      }
+    ]
+  },
+  "verification": {
+    "release": "9aa10dc82482b817",
+    "city": "3304557",
+    "month": "202406",
+    "aggregateRows": 1,
+    "scopeValidated": true,
+    "nationalCoverageAssessed": false,
+    "files": [
+      {
+        "path": "municipal-aggregate.json",
+        "bytes": 475,
+        "sha256": "c7afc91b20895210c5080ad1691a46337ce855e5ca7f80008e62c8a8a7680eff"
+      },
+      {
+        "path": "provenance/totals-9aa10dc82482b817.json",
+        "bytes": 720,
+        "sha256": "f2256c63b4606fca20c49c4791c8350226a6b356e9700fc6be1ece03ce34b931"
+      }
+    ],
+    "note": "CGU authenticated pilot. The national IBGE catalog is not required or certified by this pilot."
+  },
+  "execution": {
+    "url": "https://github.com/NorbertoVieiraDev/bolsafamilia-dados/actions/runs/42223178762",
+    "result": "success"
+  },
+  "bulkReconciliation": {
+    "siafi": "6001",
+    "valueCents": 34859043200,
+    "beneficiaries": 544461,
+    "valueMatches": true,
+    "quantityMatches": true
+  }
+}

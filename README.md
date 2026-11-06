@@ -6,7 +6,7 @@ Extração reproduzível dos dados oficiais do Novo Bolsa Família, publicados p
 
 ## Estado
 
-Especificação oficial consultada em 06/11/2026. **Piloto autenticado CGU concluído e verificado em 06/11/2026:** município de São Paulo, janeiro de 2026. [Relatório agregado e hashes](reports/pilots/42165832339.json) · [Execução no GitHub Actions](https://github.com/NorbertoVieiraDev/bolsafamilia-dados/actions/runs/42165832339). Os hashes dos arquivos agregados gerados foram conferidos a partir da evidência da execução; os originais da API não foram baixados independentemente nesta sessão. Os testes automatizados usam dados sintéticos. Não há carga nacional certificada nem agendamento automático ativo. A série preparada começa em março de 2023; programas antecessores não foram integrados.
+Especificação oficial consultada em 06/11/2026. **Piloto autenticado CGU concluído e verificado em 06/11/2026:** município de São Paulo, janeiro de 2026. [Relatório agregado e hashes](reports/pilots/42165832339.json) · [Execução no GitHub Actions](https://github.com/NorbertoVieiraDev/bolsafamilia-dados/actions/runs/42165832339). Os hashes dos arquivos agregados gerados foram conferidos a partir da evidência da execução; os originais da API não foram baixados independentemente nesta sessão. Os testes automatizados usam dados sintéticos. A carga nacional de 43 meses (202303–202609) e 859.194.021 linhas de origem está concluída; consulte o [manifesto auditado](reports/history/source-manifest.json). Não há agendamento automático ativo nem certificação pela API de todas as células. A série preparada começa em março de 2023; programas antecessores não foram integrados.
 
 ## Reprodução
 
@@ -69,3 +69,19 @@ Configure em **Settings → Secrets and variables → Actions → New repository
 Abra **Actions → Coleta piloto CGU → Run workflow**. Informe um município IBGE e um mês; os valores iniciais são São Paulo (`3550308`) e janeiro de 2026 (`202601`). A execução valida o coletor, consulta somente um município/mês na CGU e verifica a resposta agregada. O município devolvido pela própria CGU é conferido contra o solicitado; este piloto não depende do catálogo nacional do IBGE, cuja indisponibilidade não deve impedir a validação da chave. O catálogo completo continua necessário para ampliar e medir a cobertura nacional. Não faz carga nacional nem consulta beneficiários individuais. Falha de autenticação ou ausência de registro não é declarada sucesso.
 
 O resultado fica no resumo da execução e no artefato `cgu-piloto-<run_id>`, retido por 14 dias. O artefato contém somente agregado e evidências de integridade, sem chave, respostas individuais ou originais brutos. Não há publicação do site nem cronograma automático. Use o artefato para conferir os conceitos e valores com o Portal antes de ampliar a coleta.
+
+## Histórico nacional em lote
+
+A API continua usada para conciliação autenticada de municípios. Para o histórico nacional, `scripts/bulk.py` lê os ZIPs mensais publicados no próprio Portal, sem chave, usando DuckDB 1.4.3. A carga por arquivo evita centenas de milhares de chamadas individuais.
+
+```sh
+python -m pip install -r requirements.txt
+python scripts/bulk.py --start 202303 --end 202609 --workers 2 --keep-month 202609
+python scripts/inflation.py --history work/history --original work/ipca-original.json
+```
+
+Somente períodos com arquivo oficial acessível devem ser solicitados. Em 06/11/2026, 43 arquivos entre 202303 e 202609 foram identificados; 202610 retornou 403 e não foi tratado como mês sem pagamentos. Os arquivos somam aproximadamente 15,18 GB comprimidos. Reserve espaço para originais, temporários e tabelas locais; duas tarefas paralelas usam limites de memória de 5 GB cada. O processamento anual agrupa por estado para limitar a memória.
+
+A competência do arquivo é validada em todas as linhas; referências originais anteriores são conservadas para não perder parcelas retroativas. O CSV usa códigos **SIAFI**, que não são códigos IBGE. O site usa identificadores explícitos `siafi-XXXX`; não inventa correspondências. A quantidade mensal é NIS distintos por município mais cada registro sem NIS, mantido separado. Esta regra deve ser conciliada com a API; já coincide nos pilotos São Paulo/202601 e Rio Branco/202303. Não representa o total de membros das famílias.
+
+`scripts/pages_data.py` gera arquivos sanitizados para consulta: apenas nome, valor e nome normalizado para busca, sem CPF, NIS ou identificador de origem. Os acumulados anuais usam NIS somente localmente para distinguir homônimos; registros sem NIS não são fundidos por nome. Todos os totais de saída são conciliados com os totais de entrada antes de liberar a consulta. O responsável autorizou explicitamente a publicação de nomes e valores sem CPF/NIS nos projetos públicos Cloudflare Pages destinados à página. Esses arquivos não são versionados neste Git; aqui permanecem método, scripts e evidências agregadas.

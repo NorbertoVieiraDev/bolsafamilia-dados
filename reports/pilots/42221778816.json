@@ -1,0 +1,69 @@
+{
+  "aggregate": {
+    "scope": "municipal-pilot",
+    "release": "55e3da3b857485d5",
+    "updatedAt": "2026-11-06T12:58:50.825157+00:00",
+    "municipality": {
+      "codigoIBGE": "1200401",
+      "nomeIBGE": "RIO BRANCO",
+      "codigoRegiao": "1",
+      "nomeRegiao": "NORTE",
+      "pais": "BRASIL",
+      "uf": {
+        "sigla": "AC",
+        "nome": "ACRE"
+      }
+    },
+    "record": {
+      "city": "1200401",
+      "month": "202303",
+      "valueCents": 2776315200,
+      "beneficiaries": 42897
+    }
+  },
+  "provenance": {
+    "collectedAt": "2026-11-06T12:58:50.825157+00:00",
+    "kind": "municipal-aggregate-pilot",
+    "city": "1200401",
+    "month": "202303",
+    "responses": [
+      {
+        "url": "https://api.portaldatransparencia.gov.br/api-de-dados/novo-bolsa-familia-por-municipio?mesAno=202303&codigoIbge=1200401&pagina=1",
+        "sha256": "9736b69822e9bde8786fd4a65a6dd6189a87d5620225d997e814d6f75aefbaee",
+        "rows": 1,
+        "cached": false
+      },
+      {
+        "url": "https://api.portaldatransparencia.gov.br/api-de-dados/novo-bolsa-familia-por-municipio?mesAno=202303&codigoIbge=1200401&pagina=2",
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "rows": 0,
+        "cached": false
+      }
+    ]
+  },
+  "verification": {
+    "release": "55e3da3b857485d5",
+    "city": "1200401",
+    "month": "202303",
+    "aggregateRows": 1,
+    "scopeValidated": true,
+    "nationalCoverageAssessed": false,
+    "files": [
+      {
+        "path": "municipal-aggregate.json",
+        "bytes": 457,
+        "sha256": "5b7fbf602df7b2b8e92b786008ab3049401098d7a1172d9d0ae3b8b60d5b546b"
+      },
+      {
+        "path": "provenance/totals-55e3da3b857485d5.json",
+        "bytes": 720,
+        "sha256": "4e2e7be51d9dbeeaf19a0f5b81d0363373b87445ca13382ccf1916ef30f9b109"
+      }
+    ],
+    "note": "CGU authenticated pilot. The national IBGE catalog is not required or certified by this pilot."
+  },
+  "execution": {
+    "url": "https://github.com/NorbertoVieiraDev/bolsafamilia-dados/actions/runs/42221778816",
+    "result": "success"
+  }
+}

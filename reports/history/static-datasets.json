@@ -1,0 +1,115 @@
+{
+  "datasets": {
+    "2023": {
+      "period": "2023",
+      "months": [
+        "202303",
+        "202304",
+        "202305",
+        "202306",
+        "202307",
+        "202308",
+        "202309",
+        "202310",
+        "202311",
+        "202312"
+      ],
+      "peopleRows": 23651544,
+      "valueCents": 13459139892500,
+      "municipalities": 5570,
+      "files": 12248,
+      "bytes": 274224773,
+      "inputSha256": "9a29c13ba2b494f885fe7e07001d127f2ea8629d0382df6534b7b59c43b4d401",
+      "sourceIdentifiersPublished": false,
+      "method": "Name/amount/search triples, sorted per municipality; 10000 records per gzip asset; prefix search uses chunk bounds."
+    },
+    "2024": {
+      "period": "2024",
+      "months": [
+        "202401",
+        "202402",
+        "202403",
+        "202404",
+        "202405",
+        "202406",
+        "202407",
+        "202408",
+        "202409",
+        "202410",
+        "202411",
+        "202412"
+      ],
+      "peopleRows": 23578818,
+      "valueCents": 16345205298900,
+      "municipalities": 5570,
+      "files": 12228,
+      "bytes": 275718199,
+      "inputSha256": "6f6c0eb002ca69beae28af18d53538a4bb6cad479ee85f4d7514b7e4583104da",
+      "sourceIdentifiersPublished": false,
+      "method": "Name/amount/search triples, sorted per municipality; 10000 records per gzip asset; prefix search uses chunk bounds."
+    },
+    "2025": {
+      "period": "2025",
+      "months": [
+        "202501",
+        "202502",
+        "202503",
+        "202504",
+        "202505",
+        "202506",
+        "202507",
+        "202508",
+        "202509",
+        "202510",
+        "202511",
+        "202512"
+      ],
+      "peopleRows": 22673872,
+      "valueCents": 15711921882800,
+      "municipalities": 5571,
+      "files": 12168,
+      "bytes": 262000042,
+      "inputSha256": "ff88cb068cc2a42fba6fafc0480d828a632c0d2b0aecc4b010f1a0bfaac89a12",
+      "sourceIdentifiersPublished": false,
+      "method": "Name/amount/search triples, sorted per municipality; 10000 records per gzip asset; prefix search uses chunk bounds."
+    },
+    "2026": {
+      "period": "2026",
+      "months": [
+        "202601",
+        "202602",
+        "202603",
+        "202604",
+        "202605",
+        "202606",
+        "202607",
+        "202608",
+        "202609"
+      ],
+      "peopleRows": 21225104,
+      "valueCents": 11561360130500,
+      "municipalities": 5571,
+      "files": 12071,
+      "bytes": 244510814,
+      "inputSha256": "4652b788488eb222c553346338342876ae50799f16f825ef6842c3da47e120ac",
+      "sourceIdentifiersPublished": false,
+      "method": "Name/amount/search triples, sorted per municipality; 10000 records per gzip asset; prefix search uses chunk bounds."
+    },
+    "202609": {
+      "period": "202609",
+      "months": [
+        "202609"
+      ],
+      "peopleRows": 18652890,
+      "valueCents": 1265979751100,
+      "municipalities": 5571,
+      "files": 11930,
+      "bytes": 203616642,
+      "inputSha256": "a2b0f046691554f4f6bf7da224e5c3988f8316ed0889d66da52ebf0a3742ee5b",
+      "sourceIdentifiersPublished": false,
+      "method": "Name/amount/search triples, sorted per municipality; 10000 records per gzip asset; prefix search uses chunk bounds."
+    }
+  },
+  "privacy": "Only names, amounts and normalized names are in lookup assets; CPF, NIS and source person keys are excluded.",
+  "authorization": "Owner explicitly approved public name/amount lookup in the designated Cloudflare Pages projects on 2026-11-06."
+}

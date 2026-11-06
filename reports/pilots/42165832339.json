@@ -1,0 +1,71 @@
+{
+  "aggregate": {
+    "scope": "municipal-pilot",
+    "release": "45a909b3df394aaa",
+    "updatedAt": "2026-11-06T05:00:54.394138+00:00",
+    "municipality": {
+      "codigoIBGE": "3550308",
+      "nomeIBGE": "SÃO PAULO",
+      "codigoRegiao": "3",
+      "nomeRegiao": "SUDESTE",
+      "pais": "BRASIL",
+      "uf": {
+        "sigla": "SP",
+        "nome": "SÃO PAULO"
+      }
+    },
+    "record": {
+      "city": "3550308",
+      "month": "202601",
+      "valueCents": 43822258900,
+      "beneficiaries": 625732
+    }
+  },
+  "provenance": {
+    "collectedAt": "2026-11-06T05:00:54.394138+00:00",
+    "kind": "municipal-aggregate-pilot",
+    "city": "3550308",
+    "month": "202601",
+    "responses": [
+      {
+        "url": "https://api.portaldatransparencia.gov.br/api-de-dados/novo-bolsa-familia-por-municipio?mesAno=202601&codigoIbge=3550308&pagina=1",
+        "sha256": "4df2f265c1c43f170d7d3c8a154a524cc8820f5237bc224b413bb28f598c74a3",
+        "rows": 1,
+        "cached": false
+      },
+      {
+        "url": "https://api.portaldatransparencia.gov.br/api-de-dados/novo-bolsa-familia-por-municipio?mesAno=202601&codigoIbge=3550308&pagina=2",
+        "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "rows": 0,
+        "cached": false
+      }
+    ]
+  },
+  "verification": {
+    "release": "45a909b3df394aaa",
+    "city": "3550308",
+    "month": "202601",
+    "aggregateRows": 1,
+    "scopeValidated": true,
+    "nationalCoverageAssessed": false,
+    "files": [
+      {
+        "path": "municipal-aggregate.json",
+        "bytes": 467,
+        "sha256": "f7863e46ac4b39e43573aa0ef4b616b186477eeab976b4f49cc2bf9d2ed155db"
+      },
+      {
+        "path": "provenance/totals-45a909b3df394aaa.json",
+        "bytes": 720,
+        "sha256": "17f303c984ea41ee5b1fff2804c6a0e50bdaae1e712b91a58c6ced3b741eb6ca"
+      }
+    ],
+    "note": "CGU authenticated pilot. The national IBGE catalog is not required or certified by this pilot."
+  },
+  "execution": {
+    "url": "https://github.com/NorbertoVieiraDev/bolsafamilia-dados/actions/runs/42165832339",
+    "commit": "a8fb9580a9acfb2f006e30da21ca9464ed44b212",
+    "result": "success",
+    "verification": "Generated aggregate/provenance bytes reconstructed from Actions aggregate-only evidence; SHA-256 and byte counts matched. Raw API bytes not independently downloaded."
+  }
+}

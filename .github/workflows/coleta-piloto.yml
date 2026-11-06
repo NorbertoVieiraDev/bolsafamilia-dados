@@ -1,0 +1,55 @@
+name: Coleta piloto CGU
+
+on:
+  workflow_dispatch:
+    inputs:
+      city:
+        description: Código IBGE do município (7 dígitos)
+        required: true
+        default: '3550308'
+        type: string
+      month:
+        description: Mês da referência (AAAAMM, a partir de 202303)
+        required: true
+        default: '202601'
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: coleta-piloto-cgu
+  cancel-in-progress: false
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Obter código
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - name: Configurar Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Verificar o coletor com dados sintéticos
+        run: python -m unittest discover -s tests -v
+      - name: Coletar e verificar um município e mês
+        env:
+          PORTAL_TRANSPARENCIA_API_KEY: ${{ secrets.PORTAL_TRANSPARENCIA_API_KEY }}
+          PILOT_CITY: ${{ inputs.city }}
+          PILOT_MONTH: ${{ inputs.month }}
+        run: python scripts/run_pilot.py
+      - name: Conservar somente resultados agregados e evidências
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: cgu-piloto-${{ github.run_id }}
+          path: |
+            work/pilot/snapshot.json
+            work/pilot/provenance/totals-*.json
+            work/pilot/verification.json
+          if-no-files-found: error
+          retention-days: 14
+          include-hidden-files: false

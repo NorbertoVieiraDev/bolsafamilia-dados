@@ -61,3 +61,11 @@ python scripts/verify.py work/releases/piloto --report work/releases/piloto/veri
 O verificador confere duplicações, centavos inteiros, catálogo e cobertura, calcula hashes dos arquivos gerados e compara parcelas disponíveis com o agregado municipal. Divergências são explicitadas e exigem investigação; não são corrigidas artificialmente. O relatório contém somente códigos territoriais, métricas e hashes. Pode ser revisado e copiado para um diretório público de relatórios após uma coleta real. A lista de exibição é dividida em páginas de 25 registros e índices por três primeiras letras, permitindo busca de prefixo sem carregar todo o município no navegador.
 
 Se o serviço do IBGE estiver indisponível, o comando de catálogo faz tentativas limitadas e falha explicitamente. Um original JSON obtido da mesma URL oficial pode ser processado offline com `catalog --input caminho/municipios.json`; seu hash será preservado. Não use catálogo de terceiros ou lista municipal fictícia para preencher cobertura.
+
+## Coleta piloto no GitHub Actions
+
+Configure em **Settings → Secrets and variables → Actions → New repository secret** o segredo `PORTAL_TRANSPARENCIA_API_KEY`. O valor não é recuperado pelo código de desenvolvimento nem gravado no Git.
+
+Abra **Actions → Coleta piloto CGU → Run workflow**. Informe um município IBGE e um mês; os valores iniciais são São Paulo (`3550308`) e janeiro de 2026 (`202601`). A execução valida o coletor, baixa o catálogo IBGE, consulta somente um município/mês e verifica a resposta agregada. Não faz carga nacional nem consulta beneficiários individuais. Falha de autenticação ou ausência de registro não é declarada sucesso.
+
+O resultado fica no resumo da execução e no artefato `cgu-piloto-<run_id>`, retido por 14 dias. O artefato contém somente agregado e evidências de integridade, sem chave, respostas individuais ou originais brutos. Não há publicação do site nem cronograma automático. Use o artefato para conferir os conceitos e valores com o Portal antes de ampliar a coleta.

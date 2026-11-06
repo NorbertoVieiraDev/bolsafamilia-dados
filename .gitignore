@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+work/
+raw/
+derived/
+*.parquet
+*.zip
+*.sqlite*
+__pycache__/
+.venv/

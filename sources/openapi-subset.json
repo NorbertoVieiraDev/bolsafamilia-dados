@@ -1,0 +1,472 @@
+{
+  "retrieved_at": "2026-11-06",
+  "source": "https://api.portaldatransparencia.gov.br/v3/api-docs",
+  "sha256_full_spec": "cdc3d97843edc149e4777c4f01189a33344afc36685ea8ba1546410f609a3b96",
+  "paths": {
+    "/api-de-dados/novo-bolsa-familia-sacado-por-nis": {
+      "get": {
+        "tags": [
+          "Benefícios"
+        ],
+        "operationId": "novoBolsaFamiliaSacadoPorNis",
+        "parameters": [
+          {
+            "name": "nis",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "anoMesReferencia",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "anoMesCompetencia",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pagina",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NovoBolsaFamiliaPagoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api-de-dados/novo-bolsa-familia-sacado-por-cpf-ou-nis": {
+      "get": {
+        "tags": [
+          "Benefícios"
+        ],
+        "operationId": "novoBolsaFamiliaSacadoPorCpfOuNis",
+        "parameters": [
+          {
+            "name": "codigo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "anoMesReferencia",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "anoMesCompetencia",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "pagina",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NovoBolsaFamiliaPagoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api-de-dados/novo-bolsa-familia-sacado-beneficiario-por-municipio": {
+      "get": {
+        "tags": [
+          "Benefícios"
+        ],
+        "operationId": "novoBolsaFamiliaSacadoDosBeneficiariosPorMunicipio",
+        "parameters": [
+          {
+            "name": "mesAno",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "codigoIbge",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagina",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/NovoBolsaFamiliaPagoDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api-de-dados/novo-bolsa-familia-por-municipio": {
+      "get": {
+        "tags": [
+          "Benefícios"
+        ],
+        "operationId": "novoBolsaFamiliaPorMunicipio",
+        "parameters": [
+          {
+            "name": "mesAno",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "codigoIbge",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "pagina",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "integer",
+              "format": "int32",
+              "default": 1
+            }
+          }
+        ],
+        "responses": {
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "401": {
+            "description": "Unauthorized",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal Server Error",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "200": {
+            "description": "OK",
+            "content": {
+              "*/*": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BeneficioPorMunicipioDTO"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "NovoBolsaFamiliaPagoDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "dataMesCompetencia": {
+            "type": "string",
+            "format": "date"
+          },
+          "dataMesReferencia": {
+            "type": "string",
+            "format": "date"
+          },
+          "municipio": {
+            "$ref": "#/components/schemas/MunicipioDTO"
+          },
+          "beneficiarioNovoBolsaFamilia": {
+            "$ref": "#/components/schemas/BeneficiarioDTO"
+          },
+          "valorSaque": {
+            "type": "number"
+          }
+        }
+      },
+      "BeneficioPorMunicipioDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "dataReferencia": {
+            "type": "string",
+            "format": "date"
+          },
+          "municipio": {
+            "$ref": "#/components/schemas/MunicipioDTO"
+          },
+          "tipo": {
+            "$ref": "#/components/schemas/TipoBeneficioDTO"
+          },
+          "valor": {
+            "type": "number"
+          },
+          "quantidadeBeneficiados": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "MunicipioDTO": {
+        "type": "object",
+        "properties": {
+          "codigoIBGE": {
+            "type": "string"
+          },
+          "nomeIBGE": {
+            "type": "string"
+          },
+          "codigoRegiao": {
+            "type": "string"
+          },
+          "nomeRegiao": {
+            "type": "string"
+          },
+          "pais": {
+            "type": "string"
+          },
+          "uf": {
+            "$ref": "#/components/schemas/UFDTO"
+          }
+        }
+      },
+      "BeneficiarioDTO": {
+        "type": "object",
+        "properties": {
+          "cpfFormatado": {
+            "type": "string"
+          },
+          "nis": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          }
+        }
+      },
+      "UFDTO": {
+        "type": "object",
+        "properties": {
+          "sigla": {
+            "type": "string"
+          },
+          "nome": {
+            "type": "string"
+          }
+        }
+      },
+      "TipoBeneficioDTO": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "descricao": {
+            "type": "string"
+          },
+          "descricaoDetalhada": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

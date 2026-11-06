@@ -6,7 +6,7 @@ Extração reproduzível dos dados oficiais do Novo Bolsa Família, publicados p
 
 ## Estado
 
-Especificação oficial consultada em 06/11/2026. **Piloto autenticado CGU concluído e verificado em 06/11/2026:** município de São Paulo, janeiro de 2026. [Relatório agregado e hashes](reports/pilots/42165832339.json) · [Execução no GitHub Actions](https://github.com/NorbertoVieiraDev/bolsafamilia-dados/actions/runs/42165832339). Os hashes dos arquivos agregados gerados foram conferidos a partir da evidência da execução; os originais da API não foram baixados independentemente nesta sessão. Os testes automatizados usam dados sintéticos. Não há carga nacional certificada nem agendamento automático ativo. A série preparada começa em março de 2023; programas antecessores não foram integrados.
+Especificação oficial consultada em 06/11/2026. **Piloto autenticado CGU concluído e verificado em 06/11/2026:** município de São Paulo, janeiro de 2026. [Relatório agregado e hashes](reports/pilots/42165832339.json) · [Execução no GitHub Actions](https://github.com/NorbertoVieiraDev/bolsafamilia-dados/actions/runs/42165832339). Os hashes dos arquivos agregados gerados foram conferidos a partir da evidência da execução; os originais da API não foram baixados independentemente nesta sessão. Os testes automatizados usam dados sintéticos. A carga nacional de 43 meses (202303–202609) e 859.194.021 linhas de origem está concluída; consulte o [manifesto auditado](reports/history/source-manifest.json). Não há agendamento automático ativo nem certificação pela API de todas as células. A série preparada começa em março de 2023; programas antecessores não foram integrados.
 
 ## Reprodução
 
